@@ -46,23 +46,25 @@
         </section>
 
         <!-- Sección 3: Contacto Dinámico -->
-        <section id="contacto">
-            <h2>Contacto</h2>
-            <form id="form-contacto"> action="https://formspree.io/f/mbgljeja" method="POST">
-                
-                <label for="nombre">Nombre completo:</label>
-                <input type="text" id="nombre" placeholder="Escribe tu nombre" required>
+<section id="contacto">
+    <h2>Contacto</h2>
+    
+    <!-- Asegúrate de abrir la etiqueta con <form -->
+    <form id="form-contacto" action="https://formspree.io/f/mbgljeja" method="POST">
+        <label for="nombre">Nombre completo:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" required>
 
-                <label for="correo">Correo electrónico:</label>
-                <input type="email" id="correo" placeholder="tu@correo.com" required>
+        <label for="correo">Correo electrónico:</label>
+        <input type="email" id="correo" name="email" placeholder="tu@correo.com" required>
 
-                <label for="mensaje">Mensaje:</label>
-                <textarea id="mensaje" rows="4" placeholder="¿En qué puedo ayudarte?" required></textarea>
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="4" placeholder="¿En qué puedo ayudarte?" required></textarea>
 
-                <button type="submit">Enviar Mensaje</button>
-            </form>
-            <p id="mensaje-respuesta"></p>
-        </section>
+        <button type="submit">Enviar Mensaje</button>
+    </form>
+    
+    <p id="mensaje-respuesta"></p>
+</section>
     </main>
 
     <footer>
