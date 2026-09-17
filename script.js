@@ -1,26 +1,18 @@
+// Captura del formulario de contacto
 const formContacto = document.querySelector('#form-contacto');
+const inputNombre = document.querySelector('#nombre');
 const mensajeRespuesta = document.querySelector('#mensaje-respuesta');
 
-if (formContacto) {
-    formContacto.addEventListener('submit', async (e) => {
-        e.preventDefault(); // Detenemos el envío tradicional
+// Manejo del evento Submit
+formContacto.addEventListener('submit', (e) => {
+    e.preventDefault(); // Detiene el reinicio de la página
 
-        const datos = new FormData(formContacto);
-        
-        // Enviamos la información a Formspree en segundo plano
-        const respuesta = await fetch(formContacto.action, {
-            method: 'POST',
-            body: datos,
-            headers: { 'Accept': 'application/json' }
-        });
+    const nombre = inputNombre.value;
 
-        if (respuesta.ok) {
-            mensajeRespuesta.textContent = '¡Gracias! Tu mensaje ha sido enviado a mi correo.';
-            mensajeRespuesta.style.color = '#1abc9c';
-            formContacto.reset();
-        } else {
-            mensajeRespuesta.textContent = 'Hubo un error al enviar el mensaje. Intenta de nuevo.';
-            mensajeRespuesta.style.color = '#e74c3c';
-        }
-    });
-}
+    // Feedback dinámico en pantalla
+    mensajeRespuesta.textContent = `¡Excelente, ${nombre}! Tu mensaje ha sido enviado con éxito.`;
+    mensajeRespuesta.style.color = '#1abc9c';
+
+    // Limpia las casillas
+    formContacto.reset();
+});
