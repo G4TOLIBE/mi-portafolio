@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio - Erick Cuellar</title>
+    <link rel="stylesheet" href="Styles proyecto final.css">
+    <script src="Java proyecto final.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <h1>Erick Cuellar</h1>
+        <p class="subtitulo">Desarrollador Web Frontend</p>
+        <nav>
+            <a href="#sobre-mi">Sobre mí</a>
+            <a href="#proyectos">Proyectos</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Sección 1: Presentación -->
+        <section id="sobre-mi">
+            <h2>Sobre mí</h2>
+            <p>¡Hola! Apasionado por la tecnología y la creación de sitios web modernos, funcionales y adaptables a cualquier dispositivo.</p>
+        </section>
+
+        <!-- Sección 2: Tarjetas de Proyectos (Flexbox) -->
+        <section id="proyectos">
+            <h2>Mis Proyectos</h2>
+            <div class="contenedor-tarjetas">
+                <div class="tarjeta">
+                    <h3>Sitio Web Semántico</h3>
+                    <p>Estructura moderna en HTML5 accesible para motores de búsqueda.</p>
+                </div>
+                <div class="tarjeta">
+                    <h3>Diseño Responsivo</h3>
+                    <p>Maquetación fluida usando CSS Flexbox y Media Queries.</p>
+                </div>
+                <div class="tarjeta">
+                    <h3>Formulario Interactivo</h3>
+                    <p>Captura y validación de datos en tiempo real mediante JS.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección 3: Contacto Dinámico -->
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <form id="form-contacto">
+                <label for="nombre">Nombre completo:</label>
+                <input type="text" id="nombre" placeholder="Escribe tu nombre" required>
+
+                <label for="correo">Correo electrónico:</label>
+                <input type="email" id="correo" placeholder="tu@correo.com" required>
+
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" rows="4" placeholder="¿En qué puedo ayudarte?" required></textarea>
+
+                <button type="submit">Enviar Mensaje</button>
+            </form>
+            <p id="mensaje-respuesta"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Erick Cuellar. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
